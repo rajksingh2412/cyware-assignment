@@ -4,7 +4,7 @@ pipeline {
         stage('git-stage') { 
             steps {
                 echo "This is Git COnfig stage."
-                sh 'git clone xyz'
+                sh 'gh repo clone rajksingh2412/cyware-assignment'
             }
         }
         stage('Install') { 
@@ -17,7 +17,7 @@ pipeline {
         stage('Deploy') { 
             steps {
                 echo "This is Deploy stage." 
-                sh 'cd cyware'
+                sh 'cd cyware-assignmen/'
                 sh 'docker-compose up'
             }
         }
