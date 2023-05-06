@@ -1,0 +1,9 @@
+version: '3'
+services:
+  cyware:
+    container_name: cyware-nginx
+    restart: always
+    # build: .
+    image: oderraj/cyware-nginx:latest
+    ports:
+      - '7777:80'
